@@ -12,8 +12,7 @@ Two type of service is available
   ### /dummyData/download/givenCoulmn
   This is genaric service. You can post a request(JSON payload) with two properties no of rows and no of fields with fields type.
   
-  examplae: 
-  
+  Request Body: 
   ```json 
   {
     "rows":100,
@@ -22,7 +21,8 @@ Two type of service is available
         "Last Name":"NAME",
         "Phone":"PHONE"
     }
- }
+  }
  ```
   You can pass 6 types of data. It will genarate random data and return a .csv file with given no of rows.
-  ### Data Type supported: NUMBER,DECIMEL,DATE,PHONE,EMAIL,NAME
+  ###Data Type supported: NUMBER,DECIMEL,DATE,PHONE,EMAIL,NAME
+   
