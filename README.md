@@ -7,6 +7,7 @@ Two type of service is available
   ### /dummyData/getData
   This service has one parameter which can containe No of rows.
   Response: It will genarate dummy data for employees and return a .csv file with dummy constant member data.
+  
 2. Post Service
   ### /dummyData/download/givenCoulmn
   This is genaric service. You can post a request(JSON payload) with two properties no of rows and no of fields with fields type.
