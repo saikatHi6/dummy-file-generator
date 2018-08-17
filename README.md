@@ -24,4 +24,4 @@ Two type of service is available
  }
  ```
   You can pass 6 types of data. It will genarate random data and return a .csv file with given no of rows.
-  # Data Type supported: NUMBER,DECIMEL,DATE,PHONE,EMAIL,NAME
+  ### Data Type supported: NUMBER,DECIMEL,DATE,PHONE,EMAIL,NAME
