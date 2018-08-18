@@ -1,7 +1,6 @@
 package org.atom.genarator.service;
 
 import java.io.IOException;
-import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -10,15 +9,11 @@ import org.atom.genarator.Factory.EmployeeFactory;
 import org.atom.genarator.dto.Employee;
 import org.atom.genarator.dto.FileStructure;
 import org.atom.genarator.exception.DummyFileNotFoundException;
-import org.atom.genarator.process.DataProcessor;
 import org.atom.genarator.util.FileWriter;
-import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
-import org.springframework.context.annotation.Bean;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -30,8 +25,8 @@ public class FileServiceGenaratorImpl implements FileServiceGenarator{
 
 	private EmployeeFactory employeeFactory;
 
-	@Autowired
-	private DataProcessor dataProcessor;
+	/*@Autowired
+	private DataProcessor dataProcessor;*/
 	
 	@Autowired
 	private CoulmnFactory coulmnFactory;
@@ -189,7 +184,7 @@ public class FileServiceGenaratorImpl implements FileServiceGenarator{
 		Resource resource = loadFileAsResources();
 		writer.fileWrite(coulmnFactory.createFileStructure(fileStructure));
 		for (int i = 0; i < fileStructure.getRows(); i++) {
-			writer.fileWrite(coulmnFactory.genarateDummyDataInFile(fileStructure));
+			writer.fileWrite(coulmnFactory.genarateDummyDataInFile(fileStructure,i));
 		}
 		writer.close();
 		return resource;

@@ -9,9 +9,6 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 
-import org.atom.genarator.dto.Employee;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -57,6 +54,12 @@ public class FileWriter {
 	}
 	
 	
+	/**
+	 * Create a .csv file in class path
+	 * 
+	 * @return
+	 * @throws IOException
+	 */
 	public Path getFileWithPath() throws IOException {
 		Path path  = Paths.get("output"+System.currentTimeMillis()+".csv");
 		System.out.println(path);

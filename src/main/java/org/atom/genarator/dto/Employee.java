@@ -1,12 +1,17 @@
 package org.atom.genarator.dto;
 
-import org.springframework.beans.factory.config.ConfigurableBeanFactory;
-import org.springframework.context.annotation.Scope;
-import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.stereotype.Component;
-import org.springframework.validation.annotation.Validated;
 
-@Scope("prototype")
+/**
+ * 
+ * @author SSadhukhan
+ *
+ * This is to generate only fixed no of field  
+ *
+ *
+ */
+
+
 @Component
 public class Employee {
 	

@@ -1,10 +1,20 @@
 package org.atom.genarator.dto;
 
-import java.util.List;
 import java.util.Map;
 
 import org.atom.genarator.util.FieldType;
 import org.springframework.stereotype.Component;
+
+/**
+ * 
+ * @author SSadhukhan
+ *
+ * This is model. depends on input it will help to generate fields with fields type
+ * also define no of rows
+ *
+ *
+ */
+
 
 @Component
 public class FileStructure {
